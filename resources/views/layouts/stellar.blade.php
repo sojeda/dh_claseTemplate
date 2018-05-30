@@ -9,16 +9,10 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>@yield('htmlHeaderTitle', 'Mi Sistema Integrador')</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.4.85/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css">
-  <!-- endinject -->
-  <!-- plugin css for this page -->
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="{{ asset('stellar/css/style.css') }}">
-  <!-- endinject -->
-  <link rel="shortcut icon" href="{{ asset('stellar/images/favicon.png') }}" />
+  @yield('cssantes')
+  
+  @include('layouts.partials.styles')
+
   @yield('css')
 </head>
 
@@ -45,6 +39,7 @@
   </div>
   <!-- container-scroller -->
   <!-- plugins:js -->
+  @yield('jsantes')
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.com/libraries/popper.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
