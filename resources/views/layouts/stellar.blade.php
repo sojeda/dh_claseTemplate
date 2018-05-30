@@ -5,7 +5,9 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Stellar Admin</title>
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>@yield('htmlHeaderTitle', 'Mi Sistema Integrador')</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.4.85/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
@@ -17,6 +19,7 @@
   <link rel="stylesheet" href="{{ asset('stellar/css/style.css') }}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ asset('stellar/images/favicon.png') }}" />
+  @yield('css')
 </head>
 
 <body>
@@ -54,6 +57,7 @@
   <!-- endinject -->
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->
+  @yield('scripts')
 </body>
 
 </html>
