@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('layouts.stellar');
+    return view('empty');
+});
+
+Route::get('/lte', function () {
+    return view('layouts.adminlte');
 });
 
 Auth::routes();
