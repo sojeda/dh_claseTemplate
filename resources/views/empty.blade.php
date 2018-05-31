@@ -1,8 +1,7 @@
 @extends('layouts.stellar')
 
 @section('content')
-
-EL contenido
+{{ trans('auth.nivel.key') }}
 @endsection
 
 @section('htmlHeaderTitle')
